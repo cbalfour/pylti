@@ -35,7 +35,8 @@ LTI_PROPERTY_LIST = [
     'lti_message',
     'lti_version',
     'roles',
-    'lis_outcome_service_url'
+    'lis_outcome_service_url',
+    'ext_sakai_role'
 ]
 
 
@@ -541,6 +542,10 @@ class LTIBase(object):
         :return: LTI lis_result_sourcedid
         """
         return self.session['lis_result_sourcedid']
+
+    @property
+    def ext_sakai_role(self):
+        return self.session['ext_sakai_role']
 
     @property
     def role(self):  # pylint: disable=no-self-use
